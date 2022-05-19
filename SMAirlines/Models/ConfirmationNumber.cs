@@ -12,7 +12,7 @@ namespace SMAirlines.Models
         //store booking as a string and have a guid passed to it? Apparently SQL expects a string?
         public string Name { get; set; } = String.Empty;
         public int FlightNumber { get; set; }
-        public Passenger Owner { get; set; } = null!;
+        //public Passenger Owner { get; set; } = null!;
 
     }
 }

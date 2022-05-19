@@ -20,18 +20,18 @@ namespace SMAirlines.Data
         public DbSet<ConfirmationNumber> ConfirmationNumbers { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
+        { 
             modelBuilder.Entity<Passenger>(passenger =>
             {
                 passenger.HasMany(p => p.Bookings)
-                         .WithOne(p => p.Owner);
+                         .WithOne(); //.WithOne(p => p.Owner);
             });
 
             modelBuilder.Entity<Flight>(flight =>
             {
-                flight.HasMany(f => f.Passengers)
+                flight.HasMany(f => f.Bookings)
                 .WithOne(); 
-            });
+            }); 
         }
     }
 }

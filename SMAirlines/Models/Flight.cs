@@ -18,6 +18,6 @@ namespace SMAirlines.Models
         public string DepartureAirport { get; set; } = String.Empty;
         public string ArrivalAirport { get; set; } = String.Empty;
         public int PassengerLimit { get; set; } = 0;
-        public List<Passenger> Passengers { get; set; } = null!; 
+        public List<ConfirmationNumber> Bookings { get; set; } = null!; 
     }
 }
