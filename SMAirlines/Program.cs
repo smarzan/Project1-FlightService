@@ -2,6 +2,19 @@ using Microsoft.EntityFrameworkCore;
 using SMAirlines.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+var corsPolicy = "Cors";
+
+//Relax the security applied to API
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "AllowAll",
+        policy =>
+        {
+            policy.AllowAnyOrigin();
+            policy.AllowAnyMethod();
+            policy.AllowAnyHeader();
+        });
+});
 
 ConfigurationManager configuration = builder.Configuration;
 IWebHostEnvironment environment = builder.Environment;
@@ -40,6 +53,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
