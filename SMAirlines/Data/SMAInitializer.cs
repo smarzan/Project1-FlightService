@@ -34,9 +34,9 @@ namespace SMAirlines.Data
                 {
                     var passengersToAdd = new Passenger[]
                     {
-                    new Passenger{Name = "Joe Mama", Job = "Nurse", Email = "joemama@gmail.com", Age = 52 },
-                    new Passenger{Name = "Serena Vanderwoodsen", Job = "Model", Email = "serenav@outlook.com", Age = 21 },
-                    new Passenger{Name = "Blair Waldorf", Job = "Artist", Email = "waldorfb@wdesigns.com", Age = 20 }
+                    new Passenger{Name = "John Birb", Job = "Doctor", Email = "jbirb@gmail.com", Age = 52 },
+                    new Passenger{Name = "Jen Harding", Job = "Baker", Email = "jharding@outlook.com", Age = 33 },
+                    new Passenger{Name = "Serena Adams", Job = "Artist", Email = "sadams@wdesigns.com", Age = 26 }
                     };
 
                     context.Passengers.AddRange(passengersToAdd);
@@ -47,8 +47,8 @@ namespace SMAirlines.Data
                 {
                     var confirmationsToAdd = new ConfirmationNumber[]
                     {
-                    new ConfirmationNumber{Name="Blair Waldorf",FlightNumber=4823},
-                    new ConfirmationNumber{Name="Joe Mama",FlightNumber=2066}
+                    new ConfirmationNumber{Name="Serena Adams",FlightNumber=4823},
+                    new ConfirmationNumber{Name="John Birb",FlightNumber=2066}
                     };
 
                     context.ConfirmationNumbers.AddRange(confirmationsToAdd);
